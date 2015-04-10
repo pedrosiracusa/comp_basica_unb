@@ -9,10 +9,10 @@
 #include <stdio.h>
 
 /*Define constants*/
-const int const_i=5;
-const float const_r=3.14;
-const char const_c='a';
-const char const_s[5]="Abaco";
+const int CONST_I=5;
+const float CONST_R=3.14;
+const char CONST_C='a';
+const char CONST_S[6]="Abaco";
 
 /*Define variables*/
 int myInt;
@@ -23,10 +23,10 @@ char myCharArray[100];
 
 int main(){
 
-    printf("constant of type int: %i \n", const_i);
-    printf("constant of type float: %f \n", const_r);
-    printf("constant of type char: %c \n", const_c);
-    printf("constant of type char Array: %s \n\n", const_s);
+    printf("constant of type int: %i \n", CONST_I);
+    printf("constant of type float: %f \n", CONST_R);
+    printf("constant of type char: %c \n", CONST_C);
+    printf("constant of type char Array: %s \n\n", CONST_S);
 
     printf("Insert a value for variable of type int:\n");
     scanf("%i", &myInt);
