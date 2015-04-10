@@ -12,7 +12,7 @@ float firstGrade, secondGrade, thirdGrade, finalGrade;
 
 int main(){
 
-    printf("\nWelcome! Let's check if you final grade in this class!\n");
+    printf("\nWelcome! Let's check you final grade in this class!\n");
     printf("Please enter your grade in the first exam:\n");
     scanf("%f", &firstGrade);
 
