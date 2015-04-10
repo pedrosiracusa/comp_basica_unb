@@ -46,8 +46,8 @@ int swapIntegers(int a, int b){
     return 0;
 }
 
-float avgIntegers(int a, int b){
-    return(((float)a+(float)b)/2);
+float avgIntegers(float a, float b){
+    return((a+b)/2);
 }
 
 
