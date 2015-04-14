@@ -3,7 +3,7 @@
     Computação Básica - Turma G
     Nome: Pedro de Siracusa
     Matrícula: 09/0030711
-    Descrição: 
+    Descrição: Pede ao usuário 2 números. Caso sejam equivalentes, isso será informado por uma mensagem adequada. Caso não seja, o programa indica o número com maior valor
 */
 
 #include <stdio.h>
