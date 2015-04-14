@@ -3,7 +3,7 @@
     Computação Básica - Turma G
     Nome: Pedro Correia de Siracusa
     Matrícula: 09/0030711
-    Descrição: 
+    Descrição: Fornece as raízes de uma equação quadrática caso existam e sejam reais. Caso contrário fornece uma mensagem adequada
 */
 
 #include <stdio.h>
@@ -14,7 +14,6 @@ float input1, input2, input3;
 
 int getQuadraticRoots(float a, float b, float c){
     float delta, root1, root2;
-    //TODO
     delta = (pow(b,2))-(4 * a * c);
     if(delta >=0){
         root1 = ((0 - b) - sqrt(delta)) / (2 * a);
