@@ -3,7 +3,7 @@
     Computação Básica - Turma G
     Nome: Pedro de Siracusa
     Matrícula: 09/0030711
-    Descrição: (xxxx)
+    Descrição: 
 */
 
 #include <stdio.h>
@@ -24,12 +24,10 @@ int isInRectangle(float testPoint[], float srcPoint[], float height, float width
     }
     
     /* if testPoint is inside the rectangle */
-    else if  ( testPoint[0] < (srcPoint[0]+width) && testPoint[0] > (srcPoint[0]) ){ 
-        if ( testPoint[1] < (srcPoint[1]+height) && testPoint[1] > (srcPoint[1]) )
+    else if  ( (testPoint[0] < (srcPoint[0]+width) && testPoint[0] > srcPoint[0]) && \
+               (testPoint[1] < (srcPoint[1]+height) && testPoint[1] > srcPoint[0]) ){ 
+        
             printf("The point is inside the rectangle\n");
-
-        else
-            printf("The point is on the border of the rectangle 2\n");
         
     }
 
@@ -42,7 +40,7 @@ int isInRectangle(float testPoint[], float srcPoint[], float height, float width
 
 int main(){
 
-    float testPoint[2]={2, 10};
+    float testPoint[2]={-1, 0};
     float srcPoint[2]={0, 0};
     float height = 10;
     float width = 5;
