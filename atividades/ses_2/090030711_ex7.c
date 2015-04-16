@@ -29,7 +29,7 @@ int isInRectangle(float testPoint[], float srcPoint[], float height, float width
             printf("The point is inside the rectangle\n");
 
         else
-            printf("The point is outside the rectangle 2\n");
+            printf("The point is on the border of the rectangle 2\n");
         
     }
 
