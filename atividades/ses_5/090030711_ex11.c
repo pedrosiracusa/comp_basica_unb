@@ -3,7 +3,7 @@
     Computação Básica - Turma G
     Nome: Pedro Correia de Siracusa
     Matrícula: 09/0030711
-    Descrição: (xxx)
+    Descrição: Lê a matrícula, as notas de duas provas de sete alunos e as armazena em vetores. A seguir, calcula a média aritmética das notas e as armazena em um novo vetor. Ao final, imprime um relatório sobre cada aluno, com suas notas e média. Nesta versão inclui ainda a média total da classe, o número de alunos reprovados e aprovados.
 */
 
 

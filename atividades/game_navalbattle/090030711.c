@@ -10,6 +10,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Functions signatures */
+void setUserId();
+
 /* Size of the game table */
 #define NUM_ROWS 5
 #define NUM_COLS 5
@@ -17,6 +20,54 @@
 /* Program Variables */
 int myShipTable[NUM_ROWS][NUM_COLS];
 int enemyShipTable[NUM_ROWS][NUM_COLS];
+char userId[20];
+
+
+
+
+
+void setUserId(){
+    int cntr;    /* Counts elements for iteration */
+    int validId; /* Stores whether input id is valid */
+    printf("Digite seu Identificador (de 3 a 20 caracteres):\n");
+    scanf("%[^\n]", userId);
+    getchar();
+    
+    /* Validation of input */
+    do{
+        cntr=0;
+        validId=1;
+        while(userId[cntr]!=0 && validId==1){
+            if(userId[cntr]>='1' && userId[cntr]<='9'){
+                printf("Entrada %c é valida\n", userId[cntr]);
+                cntr++;
+            }    
+            else{ /* Input becomes invalid if not alphanumeric */
+                validId=0;
+                printf("Entrada %c não é valida\n", userId[cntr]);
+            }
+            if(cntr>20){ /* Input becomes invalid if greater than 20 characters */
+                validId=0;
+                printf("too long\n");
+            }
+        }
+    if(validId==0){
+        printf("Invalid input. Try again\n");
+        scanf("%[^\n]", userId);
+        getchar();
+    }
+    
+    }while(validId==0);
+    
+    printf("Num of chars is %i\n", cntr);
+    
+    
+    printf("Bem Vindo, %s ends at %c\n", userId, userId[2]);
+    return;
+
+}
+
+
 
 
 void printMainMenu(){
@@ -217,6 +268,7 @@ void mainMenu(){
 
 
 int main(){
-    mainMenu();
+    //mainMenu();
+    setUserId();
     return 0;
 }
