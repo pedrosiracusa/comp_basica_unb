@@ -4,7 +4,7 @@
     Nome: Pedro de Siracusa
     Matrícula: 09/0030711
     Descrição: Implementação do jogo Batalha Naval
-    VERSÃO: 1.0
+    VERSÃO: 2.0
 */
 
 #include <stdio.h>
@@ -19,16 +19,16 @@ int myShipTable[NUM_ROWS][NUM_COLS];
 int enemyShipTable[NUM_ROWS][NUM_COLS];
 
 
-int printMainMenu(){
+void printMainMenu(){
     system("clear");
     printf("============================\n");
     printf("Escolha uma opcao do menu:\n");
     printf("\t1 - Jogar\n\t2 - Configuracoes\n\t3 - Ranking\n\t0 - Sair do Jogo\n");
     printf("============================\n");
-    return 0;
+    return;
 }
 
-int printTable(int id){
+void printTable(int id){
     /* Prints user table (id=0) or enemy table (id=1)to screen */
     int i, j;
     switch(id){
@@ -52,7 +52,7 @@ int printTable(int id){
                 }
             break;
     }
-    return 0;
+    return;
 }
 
 int isAHit(int coordX, int coordY){
@@ -173,19 +173,20 @@ int getRanking(){
 }
 
 
-
-
-
-int main(){
+void mainMenu(){
+    /* Prints main menu screen and gets user choice */
     int userOption; /* Stores user chosen menu option */
-
+    
+    /* Initial message */
     system("clear");
     printf("Bem vindo ao jogo: Batalha Naval\n\n[Pressione ENTER para ir ao menu principal]\n");
     getchar(); /* Waits for ENTER keypress */
+    
+    /* Menu Loop */
     do{
-        printMainMenu();
-        scanf("%i", &userOption);
-        switch(userOption){
+        printMainMenu(); /* Prints menu options */
+        scanf("%i", &userOption); /* Listens to user input */
+        switch(userOption){  /* Executes input */
             case 1:
                 startGame();
                 break;
@@ -207,10 +208,15 @@ int main(){
                 getchar();
                 getchar();
         }
-        
+    
+    
     }while(userOption != 0);
-    
-    
+        
+    return;
+}
 
+
+int main(){
+    mainMenu();
     return 0;
 }
